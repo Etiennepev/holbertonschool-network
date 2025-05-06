@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# 0-change_your_home_IP
+grep -v -e "facebook.com" -e "localhost" /etc/hosts > /tmp/hosts
+sudo cp /tmp/hosts /etc/hosts
+echo "127.0.0.2 localhost" >> /etc/hosts
+echo "8.8.8.8 facebook.com" >> /etc/hosts
